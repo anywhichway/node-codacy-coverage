@@ -72,6 +72,9 @@ istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && c
 ```sh
 istanbul cover jasmine-node --captureExceptions spec/ && cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && rm -rf ./coverage
 ```
+In a Windows environment, try the following if you get command processing errors:
+
+Replace `./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && rm -rf ./coverage` with `coverage/lcov.info | node_modules\\.bin\\codacy-coverage && rm -rf coverage`
 
 ### [Grunt](http://gruntjs.com/)
 - Install & Configure [grunt-codacy](https://www.npmjs.com/package/grunt-codacy)
